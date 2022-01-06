@@ -20,7 +20,7 @@ namespace IndianRetailSuplier.Controllers
 
         public IActionResult Index()
         {
-            _logger.LogInformation("second log");
+            _logger.LogInformation("second log ke do ");
             return View();
         }
 
