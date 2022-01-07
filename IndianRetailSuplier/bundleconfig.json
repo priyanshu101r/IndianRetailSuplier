@@ -1,0 +1,9 @@
+[
+  {
+    "outputFileName": "~/wwwroot/Resources/IndianRetailSuplier/js/Module/Category/AllCateogry.min.js",
+    "inputFiles": [
+      "~/wwwroot/IndianRetailSuplier/js/Module/Category/AllCateogry.js"
+    ],
+    "sourceMap": true
+  }
+]
