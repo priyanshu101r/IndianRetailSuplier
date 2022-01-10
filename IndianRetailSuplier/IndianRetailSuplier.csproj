@@ -10,6 +10,8 @@
 
   <ItemGroup>
 
+    <PackageReference Include="AutoMapper" Version="11.0.0" />
+
     <PackageReference Include="bootstrap" Version="5.0.1" />
 
     <None Include="wwwroot\Resources\IndianRetailSuplier\js\Module\Category\AllCateogry.js" />

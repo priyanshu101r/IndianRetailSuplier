@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace IndianRetailSuplier.Common.AutoMapper
             if (self == null)
                 return default(List<TResult>); //throw new ArgumentNullException();
 
-            return (List<TResult>)ErpAutoMapper.Mapper.Map(self, self.GetType(), typeof(List<TResult>),
+            return (List<TResult>)IndianRetailSuplierAutoMapper.Mapper.Map(self, self.GetType(), typeof(List<TResult>),
                 (opts => { opts.Items.Add("additional_arguments", additionalArguments); }));
         }
         public static TResult MapToSingleObject<TResult>(this IEnumerable self, object additionalArguments)
@@ -20,7 +21,7 @@ namespace IndianRetailSuplier.Common.AutoMapper
             if (self == null)
                 return default(TResult); //throw new ArgumentNullException();
 
-            return (TResult)ErpAutoMapper.Mapper.Map(self, self.GetType(), typeof(TResult),
+            return (TResult)IndianRetailSuplierAutoMapper.Mapper.Map(self, self.GetType(), typeof(TResult),
                 (opts => { opts.Items.Add("additional_arguments", additionalArguments); }));
         }
 
@@ -30,7 +31,7 @@ namespace IndianRetailSuplier.Common.AutoMapper
             if (self == null)
                 return default(List<TResult>); //throw new ArgumentNullException();
 
-            return (List<TResult>)ErpAutoMapper.Mapper.Map(self, self.GetType(), typeof(List<TResult>));
+            return (List<TResult>)IndianRetailSuplierAutoMapper.Mapper.Map(self, self.GetType(), typeof(List<TResult>));
         }
 
         public static TResult MapToSingleObject<TResult>(this IEnumerable self)
@@ -38,7 +39,7 @@ namespace IndianRetailSuplier.Common.AutoMapper
             if (self == null)
                 return default(TResult); //throw new ArgumentNullException();
 
-            return (TResult)ErpAutoMapper.Mapper.Map(self, self.GetType(), typeof(TResult));
+            return (TResult)IndianRetailSuplierAutoMapper.Mapper.Map(self, self.GetType(), typeof(TResult));
         }
 
         public static List<TResult> MapSingleObjectToList<TResult>(this object self)
@@ -46,7 +47,7 @@ namespace IndianRetailSuplier.Common.AutoMapper
             if (self == null)
                 return default(List<TResult>); //throw new ArgumentNullException();
 
-            return (List<TResult>)ErpAutoMapper.Mapper.Map(self, self.GetType(), typeof(List<TResult>));
+            return (List<TResult>)IndianRetailSuplierAutoMapper.Mapper.Map(self, self.GetType(), typeof(List<TResult>));
         }
 
         public static TResult MapTo<TResult>(this object self)
@@ -54,7 +55,7 @@ namespace IndianRetailSuplier.Common.AutoMapper
             if (self == null)
                 return default(TResult); //throw new ArgumentNullException();
 
-            return (TResult)ErpAutoMapper.Mapper.Map(self, self.GetType(), typeof(TResult));
+            return (TResult)IndianRetailSuplierAutoMapper.Mapper.Map(self, self.GetType(), typeof(TResult));
         }
 
         public static TResult MapPropertiesToInstance<TResult>(this object self, TResult value)
@@ -62,7 +63,7 @@ namespace IndianRetailSuplier.Common.AutoMapper
             if (self == null)
                 return default(TResult); //throw new ArgumentNullException();
 
-            return (TResult)ErpAutoMapper.Mapper.Map(self, value, self.GetType(), typeof(TResult));
+            return (TResult)IndianRetailSuplierAutoMapper.Mapper.Map(self, value, self.GetType(), typeof(TResult));
         }
 
         public static TResult MapTo<TResult>(this object self, object additionalArguments)
@@ -70,7 +71,7 @@ namespace IndianRetailSuplier.Common.AutoMapper
             if (self == null)
                 return default(TResult); //throw new ArgumentNullException();
 
-            return (TResult)ErpAutoMapper.Mapper.Map(self, self.GetType(), typeof(TResult),
+            return (TResult)IndianRetailSuplierAutoMapper.Mapper.Map(self, self.GetType(), typeof(TResult),
                 (opts => { opts.Items.Add("additional_arguments", additionalArguments); }));
         }
     }
