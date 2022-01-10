@@ -1,3 +1,4 @@
+using IndianRetailSuplier.Common.AutoMapper;
 using IndianRetailSuplier.DATA.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -45,7 +46,8 @@ namespace IndianRetailSuplier
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            IRS_WebAutoMapperConfiguration.Configure(IRS_WebAutoMapperConfiguration.MappingExpressions);
+            IndianRetailSuplierAutoMapper.Initialize(IRS_WebAutoMapperConfiguration.MappingExpressions);
             app.UseRouting();
 
             app.UseAuthorization();
