@@ -1,363 +1,38 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IndianRetailSuplier</title>
-    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
-    @*<link rel="stylesheet" href="~/css/site.css" /*@
-
-
-    <link name="icon" href="https://www.google.com/s2/favicons?domain_url={hostname}" />
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>E-Commerce Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="~//fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <link href="~//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700" rel="stylesheet">
     <link href="~//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i" rel="stylesheet">
-
-
-    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/responsive_media/responsiveMedia.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/all.min.css">
     <link rel="stylesheet" href="~/css/style.css">
     <link href="~/css/asidebar.css" rel="stylesheet" />
     <script src="~/js/jquery.min.js"></script>
     <script src="~/Resources/bundles/scripts/shared-master-layout.js"></script>
-
     @*<script type="text/javascript">
             var IndainRetailSupler = IndainRetailSupler || {};
             IndainRetailSupler.Modules = {};
         </script>*@
-
+    <link href="~/css/headerSearchBar.css" rel="stylesheet" />
 </head>
 <body>
-    <!--<header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">IndianRetailSuplier</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">-->
-    @*<li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-        </li>*@
-    <!--<li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>-->
-    <!--header and navbar-->
-
-    <div class="col-12">
-        <header class="row">
-            <!-- Top Nav -->
-            <div class="col-12 bg-dark py-2 d-md-block d-none">
-                <div class="row">
-                    <div class="col-auto me-auto">
-                        <ul class="top-nav">
-                            <li>
-                                <a href="tel:+123-456-7890"><i class="fa fa-phone-square me-2"></i>+123-456-7890</a>
-                            </li>
-                            <li>
-                                <a href="mailto:mail@ecom.com"><i class="fa fa-envelope me-2"></i>mail@ecom.com</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-auto">
-                        <ul class="top-nav">
-                            <li>
-                                <a href="register.html"><i class="fas fa-user-edit me-2"></i>Register</a>
-                            </li>
-                            <li>
-                                <a href="login.html"><i class="fas fa-sign-in-alt me-2"></i>Login</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- Top Nav -->
-            <!-- Header -->
-
-
-            <div class="col-12 bg-white pt-4">
-                <div class="row">
-                    <div class="col-lg-auto">
-                        <div class="site-logo text-center text-lg-left">
-                            <a asp-area="" asp-controller="Home" asp-action="Index">Indian Retail Supplier</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 mx-auto mt-4 mt-lg-0">
-                        <form action="#">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <input type="search" class="form-control border-dark" placeholder="Search..." required>
-                                    <button class="btn btn-outline-dark"><i class="fas fa-search"></i></button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-lg-auto text-center text-lg-left header-item-holder">
-                        <a href="#" class="header-item">
-                            <i class="fas fa-heart me-2"></i><span id="header-favorite">0</span>
-                        </a>
-                        <a href="cart.html" class="header-item">
-                            <i class="fas fa-shopping-bag me-2"></i><span id="header-qty" class="me-3">2</span>
-                            <i class="fas fa-money-bill-wave me-2"></i><span id="header-price">$4,000</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Nav -->
-                <div class="row">
-                    <nav class="navbar navbar-expand-lg navbar-light bg-white col-12">
-                        <button class="navbar-toggler d-lg-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-
-
-                        <!--aside bar-->
-                        <div id="wrapper">
-                            <div class="overlay"></div>
-
-                            <!-- Sidebar -->
-                            <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
-                                <ul class="nav sidebar-nav">
-                                    <div class="sidebar-header">
-                                        <div class="sidebar-brand">
-                                            <a href="#">Brand</a>
-                                        </div>
-                                    </div>
-                                    <li><a href="#home">Home</a></li>
-                                    <li><a href="#about">About</a></li>
-                                    <li><a href="#events">Events</a></li>
-                                    <li><a href="#team">Team</a></li>
-                                    <li class="dropdown">
-                                        <a href="#works" class="dropdown-toggle" data-toggle="dropdown">Works <span class="caret"></span></a>
-                                        <ul class="dropdown-menu animated fadeInLeft" role="menu">
-                                            <div class="dropdown-header">Dropdown heading</div>
-                                            <li><a href="#pictures">Pictures</a></li>
-                                            <li><a href="#videos">Videeos</a></li>
-                                            <li><a href="#books">Books</a></li>
-                                            <li><a href="#art">Art</a></li>
-                                            <li><a href="#awards">Awards</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#services">Services</a></li>
-                                    <li><a href="#contact">Contact</a></li>
-                                    <li><a href="#followme">Follow me</a></li>
-                                </ul>
-                            </nav>
-                            <!-- /#sidebar-wrapper -->
-                            <!-- Page Content -->
-                            <div id="page-content-wrapper">
-                                <button type="button" id="tbtn" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
-                                    <span class="hamb-top"></span>
-                                    <span class="hamb-middle"></span>
-                                    <span class="hamb-bottom"></span>
-                                </button>
-                                @*<div class="container">
-                                    <div class="row">
-                                        <div class="col-lg-8 col-lg-offset-2">
-                                            <h1>Fancy Toggle Sidebar Navigation</h1>
-                                            <p>Bacon ipsum dolor sit amet tri-tip shoulder tenderloin shankle. Bresaola tail pancetta ball tip doner meatloaf corned beef. Kevin pastrami tri-tip prosciutto ham hock pork belly bacon pork loin salami pork chop shank corned beef tenderloin meatball cow. Pork bresaola meatloaf tongue, landjaeger tail andouille strip steak tenderloin sausage chicken tri-tip. Pastrami tri-tip kielbasa sausage porchetta pig sirloin boudin rump meatball andouille chuck tenderloin biltong shank </p>
-                                            <p>Pig meatloaf bresaola, spare ribs venison short loin rump pork loin drumstick jowl meatball brisket. Landjaeger chicken fatback pork loin doner sirloin cow short ribs hamburger shoulder salami pastrami. Pork swine beef ribs t-bone flank filet mignon, ground round tongue. Tri-tip cow turducken shank beef shoulder bresaola tongue flank leberkas ball tip.</p>
-                                            <p>Filet mignon brisket pancetta fatback short ribs short loin prosciutto jowl turducken biltong kevin pork chop pork beef ribs bresaola. Tongue beef ribs pastrami boudin. Chicken bresaola kielbasa strip steak biltong. Corned beef pork loin cow pig short ribs boudin bacon pork belly chicken andouille. Filet mignon flank turkey tongue. Turkey ball tip kielbasa pastrami flank tri-tip t-bone kevin landjaeger capicola tail fatback pork loin beef jerky.</p>
-                                            <p>Chicken ham hock shankle, strip steak ground round meatball pork belly jowl pancetta sausage spare ribs. Pork loin cow salami pork belly. Tri-tip pork loin sausage jerky prosciutto t-bone bresaola frankfurter sirloin pork chop ribeye corned beef chuck. Short loin hamburger tenderloin, landjaeger venison porchetta strip steak turducken pancetta beef cow leberkas sausage beef ribs. Shoulder ham jerky kielbasa. Pig doner short loin pork chop. Short ribs frankfurter rump meatloaf.</p>
-                                            <p>Filet mignon biltong chuck pork belly, corned beef ground round ribeye short loin rump swine. Hamburger drumstick turkey, shank rump biltong pork loin jowl sausage chicken. Rump pork belly fatback ball tip swine doner pig. Salami jerky cow, boudin pork chop sausage tongue andouille turkey.</p>
-                                        </div>
-                                    </div>
-                                </div>*@
-                            </div>
-                            <!-- /#page-content-wrapper -->
-
-                        </div>
-                        <!-- /#wrapper -->
-                        <!--end aside bar-->
-                        <div class="collapse navbar-collapse" id="mainNav">
-                            <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
-                                <li class="nav-item active">
-                                    <a class="nav-link" asp-area="" asp-action="Index" asp-controller="Home">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="electronics" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Electronics</a>
-                                    <div class="dropdown-menu" aria-labelledby="electronics">
-                                        <a class="dropdown-item" href="category.html">Computers</a>
-                                        <a class="dropdown-item" href="category.html">Mobile Phones</a>
-                                        <a class="dropdown-item" href="category.html">Television Sets</a>
-                                        <a class="dropdown-item" href="category.html">DSLR Cameras</a>
-                                        <a class="dropdown-item" href="category.html">Projectors</a>
-                                    </div>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="fashion" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Fashion</a>
-                                    <div class="dropdown-menu" aria-labelledby="fashion">
-                                        <a class="dropdown-item" href="category.html">Men's</a>
-                                        <a class="dropdown-item" href="category.html">Women's</a>
-                                        <a class="dropdown-item" href="category.html">Children's</a>
-                                        <a class="dropdown-item" href="category.html">Accessories</a>
-                                        <a class="dropdown-item" href="category.html">Footwear</a>
-                                    </div>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="books" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Books</a>
-                                    <div class="dropdown-menu" aria-labelledby="books">
-                                        <a class="dropdown-item" href="category.html">Adventure</a>
-                                        <a class="dropdown-item" href="category.html">Horror</a>
-                                        <a class="dropdown-item" href="category.html">Romantic</a>
-                                        <a class="dropdown-item" href="category.html">Children's</a>
-                                        <a class="dropdown-item" href="category.html">Non-Fiction</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-                <!-- Nav -->
-
-            </div>
-            <!-- Header -->
-
-        </header>
-    </div>
-
-    <!--end header and navbar-->
-
-
-
-
-
+    @Html.Partial("_HeaderBar")
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
-
-    <!--footer-->
-    <footer class="row">
-        <div class="col-12 bg-dark text-white pb-3 pt-5">
-            <div class="row">
-                <div class="col-lg-2 col-sm-4 text-center text-sm-left mb-sm-0 mb-3">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="footer-logo">
-                                <a asp-area="" asp-controller="Home" asp-action="Index">Indian Retail Supplier</a>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <address>
-                                221B Baker Street<br>
-                                London, England
-                            </address>
-                        </div>
-                        <div class="col-12">
-                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-8 text-center text-sm-left mb-sm-0 mb-3">
-                    <div class="row">
-                        <div class="col-12 text-uppercase">
-                            <h4>Who are we?</h4>
-                        </div>
-                        <div class="col-12 text-justify">
-                            <p>Hellow</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-sm-3 col-5 ms-lg-auto ms-sm-0 ms-auto mb-sm-0 mb-3">
-                    <div class="row">
-                        <div class="col-12 text-uppercase">
-                            <h4>Quick Links</h4>
-                        </div>
-                        <div class="col-12">
-                            <ul class="footer-nav">
-                                <li>
-                                    <a href="#">Home</a>
-                                </li>
-                                <li>
-                                    <a href="#">Contact Us</a>
-                                </li>
-                                <li>
-                                    <a href="#">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="#">Privacy Policy</a>
-                                </li>
-                                <li>
-                                    <a href="#">Terms & Conditions</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-1 col-sm-2 col-4 me-auto mb-sm-0 mb-3">
-                    <div class="row">
-                        <div class="col-12 text-uppercase text-underline">
-                            <h4>Help</h4>
-                        </div>
-                        <div class="col-12">
-                            <ul class="footer-nav">
-                                <li>
-                                    <a href="#">FAQs</a>
-                                </li>
-                                <li>
-                                    <a href="#">Shipping</a>
-                                </li>
-                                <li>
-                                    <a href="#">Returns</a>
-                                </li>
-                                <li>
-                                    <a href="#">Track Order</a>
-                                </li>
-                                <li>
-                                    <a href="#">Report Fraud</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 text-center text-sm-left">
-                    <div class="row">
-                        <div class="col-12 text-uppercase">
-                            <h4>Newsletter</h4>
-                        </div>
-                        <div class="col-12">
-                            <form action="#">
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Enter your email..." required>
-                                </div>
-                                <div class="mb-3">
-                                    <button class="btn btn-outline-light text-uppercase">Subscribe</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!--footer-->
-
-
-
+    @Html.Partial("_FooterBar")
     <footer class="border-top footer text-muted">
-
         <div class="container">
             &copy; 2022 - IndianRetailSuplier - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
@@ -370,10 +45,11 @@
     @await RenderSectionAsync("Scripts", required: false)
 
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!--templates files-->
     <script src="~/js/script.js"></script>
     <script src="~/js/jquery.js"></script>
-    <script src="~/js/bootstrap.js"></script>
     <script src="~/js/asidebar.js"></script>
 
 </body>
