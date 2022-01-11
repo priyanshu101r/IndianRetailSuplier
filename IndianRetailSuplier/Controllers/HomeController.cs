@@ -26,7 +26,7 @@ namespace IndianRetailSuplier.Controllers
       
         public IActionResult Index()
         {
-        _ logger.LogInformation("First something nitin jihnuyhui");
+        _logger.LogInformation("First something nitin jihnuyhui");
             return View();
         }
 
