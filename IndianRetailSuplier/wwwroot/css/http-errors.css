@@ -1,0 +1,90 @@
+﻿html, body {
+    height: 100%;
+    margin: 0px;
+}
+
+.http-errors {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
+.cont {
+    font-family: "Arial", Times, sans-serif;
+    color: #5d5d5c;
+    text-align: center;
+    padding: 20px;
+}
+
+    .cont img {
+        display: block;
+        height: auto;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 40%;
+    }
+
+    .cont h1 {
+        font-family: "Arial Black", Times, sans-serif;
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    .cont p {
+        font-size: 1rem;
+        margin: 3% 0;
+    }
+
+    .cont a {
+        background-color: red;
+        border-radius: 30px;
+        color: white;
+        display: inline-block;
+        padding: 1% 5%;
+        text-decoration: none;
+    }
+
+/* Large Devices, Wide Screens (lg) */
+@media (min-width: 1200px) {
+    html {
+        font-size: 24px;
+    }
+}
+
+/* Medium Devices, Desktops (md) */
+@media (max-width: 1999px) {
+    html {
+        font-size: 22px;
+    }
+}
+
+/* Small Devices, Tablets (sm) */
+@media (max-width: 991px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+/* Extra Small Devices, Tablets (xs) */
+@media (max-width: 767px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 575px) {
+    html {
+        font-size: 14px;
+    }
+
+    .cont h1 {
+        font-size: 1rem;
+    }
+
+    .cont p,
+    .cont a {
+        font-size: .8rem;
+    }
+}

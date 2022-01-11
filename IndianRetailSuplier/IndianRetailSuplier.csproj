@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Folder Include="DTO\" />
+    <Folder Include="wwwroot\images\http-Errors\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -13,6 +14,8 @@
     <PackageReference Include="AutoMapper" Version="11.0.0" />
 
     <PackageReference Include="bootstrap" Version="5.0.1" />
+
+    <None Include="wwwroot\Errors\401\Index.html" />
 
     <None Include="wwwroot\Resources\IndianRetailSuplier\js\Module\Category\AllCateogry.js" />
   </ItemGroup>
@@ -28,6 +31,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
     <PackageReference Include="Serilog.Extensions.Logging.File" Version="2.0.0" />
   </ItemGroup>
 

@@ -1,8 +1,10 @@
 using IndianRetailSuplier.Common.AutoMapper;
+using IndianRetailSuplier.CustomeFilter;
 using IndianRetailSuplier.DATA.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Server.IISIntegration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -28,7 +30,10 @@ namespace IndianRetailSuplier
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-           services.AddDbContext<DataContext>(item => item.UseSqlServer(Configuration.GetConnectionString("myconn")));
+            
+           services.AddControllersWithViews(config => config.Filters.Add(typeof(CustomExceptionFilter)));
+            // services.AddAuthentication(IISDefaults.AuthenticationScheme);
+            services.AddDbContext<DataContext>(item => item.UseSqlServer(Configuration.GetConnectionString("myconn")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,12 +49,22 @@ namespace IndianRetailSuplier
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.Use(async (context, next) =>
+            {
+                await next();
+                if (context.Response.StatusCode == 404)
+                {
+                    context.Request.Path = "/Errors/404/index.html";
+                    await next();
+                }
+            });
+            // app.UseStatusCodePagesWithRedirects("/Home/MyStatusCode?code={0}");
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             IRS_WebAutoMapperConfiguration.Configure(IRS_WebAutoMapperConfiguration.MappingExpressions);
             IndianRetailSuplierAutoMapper.Initialize(IRS_WebAutoMapperConfiguration.MappingExpressions);
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
             string Date = DateTime.Now.ToString();
             string path = "E:\\NetLearningProject\\IndianRetailSuplier\\IndianRetailSuplier";
