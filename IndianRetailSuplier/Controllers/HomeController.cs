@@ -18,16 +18,32 @@ namespace IndianRetailSuplier.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+        private readonly DataContext _context;
         
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger,DataContext context)
         {
             _logger = logger;
+            _context = context;
         }
       
         public IActionResult Index()
         {
-        _logger.LogInformation("First something nitin jihnuyhui");
-            return View();
+           _logger.LogInformation("First something nitin jihnuyhui");
+            var viewmodell = new List<ProductViewModel>();
+            viewmodell = (from Product in _context.products
+                         join productDetails in _context.productDetails
+                         on Product.Id equals productDetails.Product.Id
+                         join productImages in _context.ProductImages
+                         on Product.Id equals productImages.Product.Id
+                         select(new ProductViewModel { 
+                         productDetails = productDetails,
+                         productImages = productImages,
+                         Product = Product
+                         })).ToList();
+                          
+
+            return View(viewmodell);
+            
         }
 
         public IActionResult Privacy()

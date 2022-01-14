@@ -12,23 +12,19 @@ namespace IndianRetailSuplier.Common.AutoMapper.AutoMapperProfiles
     {
         public UserProfile()
         {
-            CreateMap<User, UserViewModel>().ConvertUsing(source => JTokenToErpPageConvert(source));
+            CreateMap<Category, CategoryViewModel>().ConvertUsing(source => JTokenToErpPageConvert(source));
             //  CreateMap<ErpPage, EntityRecord>().ConvertUsing(source => ErpPageToEntityRecordConvert(source));
         }
 
-        private static UserViewModel JTokenToErpPageConvert(User data)
+        private static CategoryViewModel JTokenToErpPageConvert(Category data)
         {
             if (data == null)
                 return null;
 
-            UserViewModel model = new UserViewModel();
-            model.Id = Convert.ToString(data.Id);
-            model.firstName = data.firstName;
-            model.lastName = data.lastName;
-            model.email = data.email;
-            model.mobilenumber = Convert.ToString(data.mobilenumber);
-            //BODY IS NOT INIT HERE - IT SHOULD BE LOADED LAZY
-
+            CategoryViewModel model = new CategoryViewModel();
+            model.id = data.Id;
+            model.CategoryName = data.CategoryName;
+            model.Description = data.Description;
             return model;
         }
     }

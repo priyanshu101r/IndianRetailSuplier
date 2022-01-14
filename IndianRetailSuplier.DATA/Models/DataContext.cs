@@ -13,6 +13,10 @@ namespace IndianRetailSuplier.DATA.Models
         {
         }
         public DbSet<User> users { get; set; }
+        public DbSet<Category> categories { get; set; }
+        public DbSet<Product> products { get; set; }
+        public  DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<ProductDetail> productDetails { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
