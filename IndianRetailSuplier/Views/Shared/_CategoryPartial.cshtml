@@ -1,0 +1,44 @@
+﻿@model IEnumerable<IndianRetailSuplier.Models.CategoryViewModel>
+
+<script src="~/Resources/IndianRetailSuplier/js/Module/Category/AllCateogry.js"></script>
+
+
+<script>
+    $(function () {
+        IndainRetailSupler.Modules.Category().init();
+    });
+</script>
+
+<div class="col-lg-5 mx-auto mt-4 mt-lg-0">
+    <div class="input-group">
+        <div class="input-group-btn search-panel">
+
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span id="search_concept">All</span> <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" id="ul" aria-labelledby="dropdownMenuButton1" role="menu">
+
+                @foreach (var item in Model)
+                {
+                    <li><a dropdown-item href="#">@item.CategoryName</a></li>
+                }
+
+
+            </ul>
+        </div>
+        <input type="hidden" name="search_param" value="all" id="search_param">
+        <input type="text" class="form-control" name="x" id="search" placeholder="Search">
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        </span>
+    </div>
+</div>
+@*<script>
+            $(document).ready(function () {
+                $('.dropdown-menu a').click(function () {
+                    $('#search_concept').text($(this).text());
+                });
+            });
+    </script>*@
